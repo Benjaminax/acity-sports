@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import "tailwindcss";
+
+.navbar-tab {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbar-tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Align with the edge of the navbar */
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar-tab:hover::after {
+  width: 100%;
+}
