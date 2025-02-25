@@ -60,7 +60,7 @@ const LatestNews = ({ isDarkMode }) => {
         <div className={`rounded-lg shadow-lg overflow-hidden mt-4 ${isDarkMode ? 'bg-red-900' : 'bg-white'}`}>
           <div className="w-full h-64 bg-gray-300">
             {/* Placeholder for image */}
-            <img src="/latestnews assets/07.jpg" alt="Talk Show" className="w-full h-full object-cover" />
+            <img src="\Inter-levels.png" alt="Talk Show" className="w-full h-full object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold">LATEST EPISODE</h3>
