@@ -48,7 +48,7 @@ const Footer = ({ isDarkMode }) => {
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="p-2 w-48 rounded-l-lg bg-[#2D2D2D] text-white border border-[#444444] focus:outline-none text-sm"
+                className="p-2 w-48 rounded-l-lg bg-white text-black border border-[#444444] focus:outline-none text-sm"
               />
               <button
                 type="submit"

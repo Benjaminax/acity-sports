@@ -39,10 +39,10 @@ const LatestNews = ({ isDarkMode }) => {
 
   return (
     <div id="latest-news" className={`max-w-4xl mx-auto my-8 px-0 ${isDarkMode ? 'text-gray-200' : 'text-black'}`}>
-      <h2 className="text-2xl font-bold mb-4">ACITY SPORTS LEAGUE UPDATES</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+      <h2 className="text-xl sm:text-2xl font-bold mb-2 text-center sm:text-left">ACITY SPORTS LEAGUE UPDATES</h2>
+      <div className="grid grid-cols-1 scroll-m-7 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
         {newsArticles.map((article, index) => (
-          <div key={index} className={`rounded-lg shadow-lg overflow-hidden ${isDarkMode ? 'bg-gray-900' : 'bg-white'} ${index % 3 === 0 ? 'col-span-2' : 'col-span-1'}`}>
+          <div key={index} className={`rounded-lg shadow-lg overflow-hidden ${isDarkMode ? 'bg-red-900' : 'bg-white'} ${index % 3 === 0 ? 'col-span-1 sm:col-span-2' : 'col-span-1'}`}>
             <div className="w-full h-64 bg-gray-300">
               {/* Placeholder for image */}
               <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
@@ -50,14 +50,14 @@ const LatestNews = ({ isDarkMode }) => {
             <div className="p-4">
               <h3 className="text-xl font-bold">{article.title}</h3>
               {article.description && <p className="mt-2">{article.description}</p>}
-              {article.time && <p className={`mt-2 text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{article.time}</p>}
+              {article.time && <p className={`mt-2 text-sm ${isDarkMode ? 'text-white' : 'text-gray-500'}`}>{article.time}</p>}
             </div>
           </div>
         ))}
       </div>
       <div className="mt-8 p-4">
         <h3 className="text-xl font-bold">ACITY SPORTS TALK SHOW UPDATES</h3>
-        <div className={`rounded-lg shadow-lg overflow-hidden mt-4 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
+        <div className={`rounded-lg shadow-lg overflow-hidden mt-4 ${isDarkMode ? 'bg-red-900' : 'bg-white'}`}>
           <div className="w-full h-64 bg-gray-300">
             {/* Placeholder for image */}
             <img src="/latestnews assets/07.jpg" alt="Talk Show" className="w-full h-full object-cover" />
