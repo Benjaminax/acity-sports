@@ -19,17 +19,17 @@ const Footer = ({ isDarkMode }) => {
           {/* Contact Us Section */}
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold mb-4">CONTACT US</h3>
-            <a href="mailto:acity.sports@gmail.com" className="text-sm text-[#A0A0A0] mb-2 block">acity.sports@gmail.com</a>
-            <p className="text-sm text-[#A0A0A0] mb-2">Agbogba-Haatso, Ghana</p>
-            <div className="flex items-center justify-center md:justify-start text-sm text-[#A0A0A0] mb-4">
+            <a href="mailto:acity.sports@gmail.com" className={`text-sm mb-2 block ${isDarkMode ? 'text-white' : 'text-[#A0A0A0]'}`}>acity.sports@gmail.com</a>
+            <p className={`text-sm mb-2 ${isDarkMode ? 'text-white' : 'text-[#A0A0A0]'}`}>Agbogba-Haatso, Ghana</p>
+            <div className={`flex items-center justify-center md:justify-start text-sm mb-4 ${isDarkMode ? 'text-white' : 'text-[#A0A0A0]'}`}>
               <Phone className="w-4 h-4 mr-2" /> {/* Call icon */}
-              <a href="tel:+233123456789" className="text-sm text-[#A0A0A0]">+233 123 456 789</a>
+              <a href="tel:+233123456789" className={`text-sm ${isDarkMode ? 'text-white' : 'text-[#A0A0A0]'}`}>+233 123 456 789</a>
             </div>
             <a
               href="https://www.instagram.com/acitysports"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center md:justify-start text-sm text-[#A0A0A0] hover:text-[#4A90E2] transition-colors"
+              className={`flex items-center justify-center md:justify-start text-sm transition-colors ${isDarkMode ? 'text-white' : 'text-[#A0A0A0]'}`}
             >
               <Instagram className="w-5 h-5 mr-2" /> {/* Instagram icon */}
               Instagram
@@ -39,7 +39,7 @@ const Footer = ({ isDarkMode }) => {
           {/* Subscribe Section */}
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-4">SUBSCRIBE</h3>
-            <p className="text-sm text-[#A0A0A0] mb-4">
+            <p className={`text-sm mb-4 ${isDarkMode ? 'text-white' : 'text-[#A0A0A0]'}`}>
               Enter your email to subscribe to the ACity Newsletter
             </p>
             <form className="flex justify-center" onSubmit={handleSubscribe}>
@@ -62,7 +62,7 @@ const Footer = ({ isDarkMode }) => {
           {/* Acity Section */}
           <div className="text-center md:text-right">
             <h3 className="text-lg font-semibold mb-4">ACITY SPORTS</h3>
-            <p className="text-sm text-[#A0A0A0]">Acity Sports. All rights reserved.</p>
+            <p className={`text-sm ${isDarkMode ? 'text-white' : 'text-[#A0A0A0]'}`}>Acity Sports. All rights reserved.</p>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { Sun, Moon, ChevronDown, Search, Menu, X } from 'lucide-react';
 const Navbar = ({ toggleTheme, isDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSidebarDropdownOpen, setIsSidebarDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -11,6 +12,10 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const toggleSidebarDropdown = () => {
+    setIsSidebarDropdownOpen(!isSidebarDropdownOpen);
   };
 
   return (
@@ -86,7 +91,18 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             </div>
             <ul className="space-y-4">
               <li><a href="#" className="block text-white hover:text-gray-200">Home</a></li>
-              <li><a href="#" className="block text-white hover:text-gray-200">Sports</a></li>
+              <li>
+                <button onClick={toggleSidebarDropdown} className="block text-white hover:text-gray-200 w-full text-left">
+                  Sports <ChevronDown className="inline h-5 w-5" />
+                </button>
+                {isSidebarDropdownOpen && (
+                  <ul className="pl-4 space-y-2">
+                    <li><a href="#" className="block text-white hover:text-gray-200">Football</a></li>
+                    <li><a href="#" className="block text-white hover:text-gray-200">Basketball</a></li>
+                    <li><a href="#" className="block text-white hover:text-gray-200">Volleyball</a></li>
+                  </ul>
+                )}
+              </li>
               <li><a href="#" className="block text-white hover:text-gray-200">Varsity</a></li>
               <li><a href="#" className="block text-white hover:text-gray-200">News</a></li>
               <li><a href="#" className="block text-white hover:text-gray-200">Achievements</a></li>
