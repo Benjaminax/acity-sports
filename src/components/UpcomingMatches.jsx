@@ -10,6 +10,7 @@ const UpcomingMatches = ({ matches, isDarkMode }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const modalRef = useRef(null);
   const slideshowRef = useRef(null);
+  const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
 
   // Function to calculate time remaining until the fixed date
   const calculateTimeRemaining = () => {
@@ -35,11 +36,21 @@ const UpcomingMatches = ({ matches, isDarkMode }) => {
   // Automatically move to the next match after a delay
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentMatchIndex((prev) => (prev + 1) % matches.length);
+      setCurrentMatchIndex((prev) => {
+        if (prev === matches.length - 1) {
+          setDirection(-1);
+          return prev - 1;
+        } else if (prev === 0) {
+          setDirection(1);
+          return prev + 1;
+        } else {
+          return prev + direction;
+        }
+      });
     }, 5000); // Change match every 5 seconds
 
     return () => clearInterval(interval);
-  }, [matches.length]);
+  }, [matches.length, direction]);
 
   // Automatically move to the next image in the slideshow on mobile
   useEffect(() => {
@@ -141,7 +152,7 @@ const UpcomingMatches = ({ matches, isDarkMode }) => {
       {/* Red Line */}
       <div className="h-1 bg-red-600 mb-4" style={{ width: `${scrollPosition}%` }}></div>
 
-      <h2 className="text-2xl font-bold mb-4">Upcoming Matches</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center">UPCOMING MATCHES</h2>
       {/* Grid Layout for Matches */}
       <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-4">
         {matches.slice(0, 3).map((match, index) => (

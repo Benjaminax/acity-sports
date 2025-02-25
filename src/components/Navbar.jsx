@@ -67,8 +67,8 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           </button>
 
           {/* Hamburger Menu Icon */}
-          <button onClick={toggleMenu} className="lg:hidden">
-            {isMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
+          <button onClick={toggleMenu} className="lg:hidden transition-transform duration-300">
+            <Menu className={`h-6 w-6 text-white ${isMenuOpen ? 'rotate-90' : 'rotate-0'}`} />
           </button>
         </div>
       </div>
