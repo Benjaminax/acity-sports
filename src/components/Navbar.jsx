@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Sun, Moon, ChevronDown, Search, Menu, X } from 'lucide-react';
 
+const LOGO_PATH = "/acity sports.png";
+
 const Navbar = ({ toggleTheme, isDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -24,7 +26,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
         {/* Logo and Navigation Links */}
         <div className="flex items-center space-x-6">
           <a href="/">
-            <img src="/src/assets/acity sports.png" alt="Logo" className="h-20" />
+            <img src={LOGO_PATH} alt="Logo" className="h-20" />
           </a>
           <ul className="hidden lg:flex space-x-6">
             <li><a href="#" className="navbar-tab hover:text-gray-200 font-semibold">HOME</a></li>

@@ -5,35 +5,35 @@ const LatestNews = ({ isDarkMode }) => {
     {
       title: "Ankama leaves Lions for Vikings",
       time: "2d | news",
-      image: "/src/assets/latestnews assets/01.jpg"
+      image: "/latestnews/01.jpg"
     },
     {
       title: "Falcons: The Underdogs",
       time: "3d | news",
-      image: "/src/assets/latestnews assets/02.jpg"
+      image: "/latestnews/02.jpg"
     },
     {
       title: "Warriors: The Trying Underdogs",
       description: "Warriors are putting in the effort to rise in the league.",
       time: "5d | news",
-      image: "/src/assets/latestnews assets/03.jpg"
+      image: "/latestnews/03.jpg"
     },
     {
       title: "Elites: On Their Way to the Worst",
       description: "Elites are struggling this season and might end up at the bottom.",
       time: "5d | news",
-      image: "/src/assets/latestnews assets/04.jpg"
+      image: "/latestnews/04.jpg"
     },
     {
       title: "Dragons: Team with Sniffer, Kumi, and Joe",
       time: "1w | news",
-      image: "/src/assets/latestnews assets/05.jpg"
+      image: "/latestnews/05.jpg"
     },
     {
       title: "Lions and Vikings: The Best Teams",
       description: "Lions and Vikings, with players like Sodja, Kbam, and Kkjr, are leading the league.",
       time: "1w | news",
-      image: "/src/assets/latestnews assets/06.jpg"
+      image: "/latestnews/06.jpg"
     }
   ];
 
@@ -60,7 +60,7 @@ const LatestNews = ({ isDarkMode }) => {
         <div className={`rounded-lg shadow-lg overflow-hidden mt-4 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
           <div className="w-full h-64 bg-gray-300">
             {/* Placeholder for image */}
-            <img src="/src/assets/latestnews assets/07.jpg" alt="Talk Show" className="w-full h-full object-cover" />
+            <img src="/latestnews/07.jpg" alt="Talk Show" className="w-full h-full object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold">LATEST EPISODE</h3>
