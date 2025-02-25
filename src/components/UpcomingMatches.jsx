@@ -137,7 +137,7 @@ const UpcomingMatches = ({ matches, isDarkMode }) => {
   }, [currentMatchIndex]);
 
   return (
-    <div className={`container mx-auto my-8 px-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+    <div id="upcoming-matches" className={`max-w-4xl mx-auto my-8 px-0 ${isDarkMode ? 'text-gray-200' : 'text-black'}`}>
       {/* Red Line */}
       <div className="h-1 bg-red-600 mb-4" style={{ width: `${scrollPosition}%` }}></div>
 
