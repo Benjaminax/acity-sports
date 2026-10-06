@@ -13,7 +13,7 @@ const Footer = ({ isDarkMode }) => {
   };
 
   return (
-    <footer className={`${isDarkMode ? 'bg-red-900' : 'bg-[#1A1A1A]'} text-white py-10 px-4`}>
+    <footer className={`mt-auto ${isDarkMode ? 'bg-red-900' : 'bg-[#1A1A1A]'} text-white py-10 px-4`}>
       <div className="container mx-auto max-w-4xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Us Section */}

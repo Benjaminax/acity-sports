@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
+/* ─── Universal Font ─────────────────────────────────────── */
+*, *::before, *::after {
+  font-family: 'Montserrat', 'Inter Tight', sans-serif;
+}
+
+/* ─── Navbar underline tab ───────────────────────────────── */
 .navbar-tab {
   position: relative;
   padding-bottom: 4px;
@@ -10,7 +16,7 @@
   content: '';
   position: absolute;
   left: 0;
-  bottom: -4px; /* Align with the edge of the navbar */
+  bottom: -4px;
   width: 0;
   height: 2px;
   background-color: white;
@@ -20,3 +26,32 @@
 .navbar-tab:hover::after {
   width: 100%;
 }
+
+/* ─── Card hover ─────────────────────────────────────────── */
+.card-hover {
+  transition: box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+}
+
+/* ─── Custom scrollbar ───────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #991b1b; }
+
+/* ─── Slide in from Right Animation ──────────────────────── */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
